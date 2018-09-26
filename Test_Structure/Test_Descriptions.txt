@@ -1,0 +1,36 @@
+package Tutorial;
+
+import org.testng.annotations.Test;
+
+public class Descriptions {
+
+	@Test(expectedExceptions= {ArithmeticException.class},description="ArthimeticException Going To Occur")
+	public void exp1()
+	{
+	
+		System.out.println(2/0);
+		
+	}
+	
+	
+	@Test(expectedExceptions= {StringIndexOutOfBoundsException.class},description="Invalid Index")
+	public void exp2()
+	{
+		
+		String name="Dhoni";
+		
+		System.out.println(name.charAt(10)); 
+		
+	}
+	
+	@Test(expectedExceptions= {Exception.class},description="This will handle exception , we have given the root exception class")
+	public void exp3()
+	{
+		
+	int a[]= {1,2};
+		
+		System.out.println(a[10]); 
+		
+	}
+	
+}

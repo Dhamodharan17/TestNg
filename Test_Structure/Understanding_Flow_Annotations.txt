@@ -1,0 +1,90 @@
+package Tutorial;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Seq_TestNg {
+
+	@BeforeSuite
+	public void setProp()
+	{
+		System.out.println("BEFORE SUITE");
+		
+	}
+	@BeforeTest
+	public void make()
+	{
+		System.out.println("BEFORE TEST");
+	}
+	@BeforeClass
+	public void dir()
+	{
+		System.out.println("BEFORE CLASS");
+	}
+	
+	@BeforeMethod
+	public void mkdir()
+	{
+		System.out.println("*********BEFORE METHOD********");
+	}
+	
+	
+	@Test
+	public void test1()
+	{
+		System.out.println("I am Testcase 1");
+	}
+	
+	
+	@Test
+	public void test2()
+	{
+		System.out.println("I am Testcase 2");
+	}
+	
+	
+	
+	
+	@Test
+	public void test3()
+	{
+		System.out.println("I am Testcase 3");
+	}
+	
+	@AfterMethod
+	public void mkdirs()
+	{
+		System.out.println("*********AFTER METHOD*************");
+	}
+	@AfterClass
+	public void dirs()
+	{
+		System.out.println("AFTER CLASS");
+	}
+	
+	@AfterTest
+	public void makes()
+	{
+		System.out.println("AFTER TEST");
+	}
+	@AfterSuite
+	public void setProps()
+	{
+	//This will not display 
+		//implemention here
+		
+	}
+
+
+	
+	
+	
+	
+}
