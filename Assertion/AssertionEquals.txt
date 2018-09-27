@@ -1,0 +1,51 @@
+package Assertions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class TestNg_AssertionEquals {
+	
+	
+	WebDriver driver;
+	WebElement UserName,PassWord,Submit;
+	String Url;
+	
+	@BeforeMethod
+	public void setProp()
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium WebDrivers\\chromedriver_win32\\chromedriver.exe");
+		
+		driver=new ChromeDriver();
+		
+		Url="https://www.facebook.com/";
+		
+		driver.get(Url);
+		
+	}
+
+	@Test
+	public void Validate()
+	{
+	
+		
+		Assert.assertEquals(driver.getCurrentUrl(),Url);
+		
+	}
+	@AfterMethod
+	public void close() throws InterruptedException
+	{
+		Thread.sleep(4000);
+		
+		driver.close();
+		
+	}
+	
+	
+
+}

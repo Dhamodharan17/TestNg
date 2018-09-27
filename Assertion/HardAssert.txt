@@ -1,0 +1,31 @@
+package Assertions;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+
+
+public class TestNg_HardAssert {
+	
+	
+	
+	
+	@Test
+	public void testCase1()
+	{
+		
+		Assert.assertEquals("Hello", "Hello");
+		
+		System.out.println("I Will Execute");
+		
+		Assert.assertEquals("Hi","Hello");
+		
+		System.out.println("I Wouldn't Execute");
+		
+		Assert.assertEquals("Hi","Hi");
+		
+		System.out.println("I Wouldn't Execute");
+		
+	
+	}
+}

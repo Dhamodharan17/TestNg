@@ -1,0 +1,28 @@
+package Assertions;
+
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+public class TestNg_SoftAsserts {
+	
+	SoftAssert soft =new SoftAssert();
+			
+	@Test
+	public void testCase1()
+	{
+		soft.assertEquals("Hello", "Hello");
+		
+		System.out.println("I will Execute");
+		
+		soft.assertEquals("Hi","Hii");
+		
+		System.out.println("T Wouldn't Execute");
+		
+		soft.assertEquals("Hello","Hello");
+		
+		System.out.println("I will Execute");
+		
+			
+	}
+	
+}

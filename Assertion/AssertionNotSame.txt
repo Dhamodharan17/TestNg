@@ -1,0 +1,34 @@
+package Assertions;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class AssertionSame {
+	
+	
+	
+
+	WebDriver driver;
+	
+	Object obj2="weed";
+	Object obj1="wine";
+	
+	
+	@Test
+	public void CheckBox_Validate() throws InterruptedException
+	{
+	Assert.assertNotSame(obj1,obj2);
+		
+
+	}
+
+	
+}
